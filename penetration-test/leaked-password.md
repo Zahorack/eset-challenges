@@ -73,5 +73,18 @@ Authorization: Basic cGVudGVzdDE6a1RON2NlSlU4aw==
 I was googling and I have find out, that credentials **Basic** refers to base64 encryption data format. After decode the 
 authorization string with online base64 decoder I got following: ***`pentest1:kTN7ceJU8k`***
 
+Or you can decode the base64 string in console like:
+```
+echo cGVudGVzdDE6a1RON2NlSlU4aw== | base64 --decode
+```
 
+## Easier solution
+
+Header response can be accessed with web browser developer tools:
+
+`Developer tools -> Network -> leaked-password -> Headers -> Response Headers`
+
+There is the same Authorization line
+
+Authorization: Basic cGVudGVzdDE6a1RON2NlSlU4aw==
 

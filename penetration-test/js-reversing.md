@@ -6,6 +6,7 @@ Find correct username and password and send them to us. [Source page](https://pe
 Is title of the task. So we have to use reverse engineering and look on JavaScript source code of html page.
 In available web browser find `developer tools` and entry table `Sources`.
 
+
 This piece of code is what we are looking for.
 ```
 function w(a){return a==='neadmin'?!0:!1}
@@ -32,7 +33,7 @@ s_but.onclick=function(e){
 }
 
 ```
-
+### The solution
 User name validation condition is true when input is `neadmin`. Password must be longer or equal to 10 and shorter 
 than 20 characters. But sum of ASCII codes of all characters must be equal 420. So password condition has multiple 
 correct combinations. For example character `*` has ASCII code 42, password could be ten stars: `**********`.
